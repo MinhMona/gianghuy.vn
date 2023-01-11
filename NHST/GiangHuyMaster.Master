@@ -1,0 +1,498 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GiangHuyMaster.master.cs" Inherits="NHST.GiangHuyMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="/App_Themes/GiangHuy/js/Slick-Js/slick.css">
+    <link rel="stylesheet" href="/App_Themes/GiangHuy/js/Slick-Js/slick-theme.css">
+    <link rel="stylesheet" href="/App_Themes/GiangHuy/js/WOW-master/animate.css">
+    <link rel="stylesheet" href="/App_Themes/GiangHuy/js/Magnific-Popup-master/magnific-popup.css">
+    <link rel="stylesheet" href="/App_Themes/GiangHuy/js/ms-Dropdown-master/css/msdropdown/dd.css">
+    <link rel="stylesheet" href="/App_Themes/GiangHuy/js/Font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/App_Themes/GiangHuy/css/reset.css">
+    <link rel="stylesheet" href="/App_Themes/GiangHuy/css/style.css">
+    <link rel="stylesheet" href="/App_Themes/GiangHuy/css/newStyle.css">
+    <link rel="stylesheet" href="/App_Themes/GiangHuy/js/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link href="/App_Themes/GiangHuy/css/css-circular-prog-bar.css" media="all" rel="stylesheet" />
+    <title>Giang Huy</title>
+    <script src="/App_Themes/GiangHuy/js/jquery-3.4.1.min.js"></script>
+    <link href="App_Themes/NewUI/js/sweet/sweet-alert.css" rel="stylesheet" />
+    <asp:Literal runat="server" ID="ltrHeader"></asp:Literal>
+    <asp:Literal ID="ltrSEO" runat="server"></asp:Literal>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99627252-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-99627252-1');
+    </script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:Literal ID="ltr_infor" runat="server"></asp:Literal>
+        <%--header--%>
+        <header class="header">
+            <div class="top-header">
+                <div class="container isner ju-space">
+                    <div class="top-header-left d-fex">
+                        <asp:Literal runat="server" ID="ltrTyGia"></asp:Literal>
+                        <asp:Literal runat="server" ID="ltrHotLine"></asp:Literal>
+                        <ul class="list-social d-fex">
+                            <asp:Literal runat="server" ID="ltrSocial"></asp:Literal>
+                        </ul>
+                    </div>
+                    <div class="top-header-right">
+                        <div class="user-box">
+                            <div class="acc-info">
+                                <asp:Literal runat="server" ID="ltrLogin"></asp:Literal>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-header">
+                <div class="container isner">
+                    <div class="main-logo">
+                        <a href="/">
+                            <asp:Literal runat="server" ID="ltrLogo"></asp:Literal>
+                        </a>
+                    </div>
+                    <div class="main-menu">
+                        <ul class="main-menu-nav">
+                            <asp:Literal runat="server" ID="ltrMenu"></asp:Literal>
+                        </ul>
+                        <div class="main-menu-overlay"></div>
+                    </div>
+                    <div class="hamburger-btn main-menu-btn">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <section class="article">
+            <div class="container">
+                <div class="article-swiper swiper">
+                    <div class="swiper-wrapper">
+                        <asp:Literal runat="server" ID="ltrSection"></asp:Literal>
+                        <%--<div class="swiper-slide">
+                            <a href="javascript:void()" class="article-item">
+                                <div class="article-image">
+                                    <img src="https://hangchina.vn/App_Themes/CSSHCN/images/manager.jpg" alt="hình nè">
+                                </div>
+                                <div class="article-content">
+                                    <div class="article-title">Lorem ipsum dolor sit amet.</div>
+                                    <div class="article-para">
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis aperiam minima iste velit odio ut
+                  odit ab ea ipsum eaque?
+                                    </div>
+                                    <div class="article-more">xem chi tiết</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void()" class="article-item">
+                                <div class="article-image">
+                                    <img src="https://hangchina.vn/App_Themes/CSSHCN/images/img02.jpg" alt="hình nè">
+                                </div>
+                                <div class="article-content">
+                                    <div class="article-title">Lorem ipsum dolor sit amet.</div>
+                                    <div class="article-para">
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis aperiam minima iste velit odio ut
+                  odit ab ea ipsum eaque?
+                                    </div>
+                                    <div class="article-more">xem chi tiết</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void()" class="article-item">
+                                <div class="article-image">
+                                    <img src="https://hangchina.vn/App_Themes/CSSHCN/images/img03.jpg" alt="hình nè">
+                                </div>
+                                <div class="article-content">
+                                    <div class="article-title">Lorem ipsum dolor sit amet.</div>
+                                    <div class="article-para">
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis aperiam minima iste velit odio ut
+                  odit ab ea ipsum eaque?
+                                    </div>
+                                    <div class="article-more">xem chi tiết</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void()" class="article-item">
+                                <div class="article-image">
+                                    <img src="https://hangchina.vn/App_Themes/CSSHCN/images/img02.jpg" alt="hình nè">
+                                </div>
+                                <div class="article-content">
+                                    <div class="article-title">Lorem ipsum dolor sit amet.</div>
+                                    <div class="article-para">
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis aperiam minima iste velit odio ut
+                  odit ab ea ipsum eaque?
+                                    </div>
+                                    <div class="article-more">xem chi tiết</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void()" class="article-item">
+                                <div class="article-image">
+                                    <img src="https://hangchina.vn/App_Themes/CSSHCN/images/img03.jpg" alt="hình nè">
+                                </div>
+                                <div class="article-content">
+                                    <div class="article-title">Lorem ipsum dolor sit amet.</div>
+                                    <div class="article-para">
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis aperiam minima iste velit odio ut
+                  odit ab ea ipsum eaque?
+                                    </div>
+                                    <div class="article-more">xem chi tiết</div>
+                                </div>
+                            </a>
+                        </div>--%>
+                    </div>
+                </div>
+
+                <div class="article-pagination">
+                    <div class="article-button swiper-button-next"></div>
+                    <div class="article-button swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+        <%--footer--%>
+        <footer class="footer">
+            <%--<div class="top-footer">
+                <div class="container">
+                    <div class="table-top-footer">
+                        <div class="columns">
+                            <div class="colum">
+                                <div class="content">
+                                    <div class="box-icon">
+                                        <a href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
+                                    </div>
+                                    <asp:Literal runat="server" ID="ltrAddress"></asp:Literal>
+                                </div>
+                            </div>
+                            <div class="colum">
+                                <div class="content">
+                                    <div class="box-icon">
+                                        <a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a>
+                                    </div>
+                                    <asp:Literal runat="server" ID="ltrPhone"></asp:Literal>
+                                </div>
+                            </div>
+                            <div class="colum">
+                                <div class="content">
+                                    <div class="box-icon">
+                                        <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                                    </div>
+                                    <asp:Literal runat="server" ID="ltrMail"></asp:Literal>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2201.557760576108!2d106.76193450417523!3d21.87434489055951!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36b54e5bb4c017d1%3A0xb748a64a3bfd4c1f!2zQ8O0bmcgdHkgVE5ISCBNVFYgWHXhuqV0IE5o4bqtcCBLaOG6qXUgR2lhbmcgSHV5!5e0!3m2!1svi!2s!4v1608107371341!5m2!1svi!2s" width="100%" height="600" frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>--%>
+            <%--<div class="middle-footer">
+                <div class="container">
+                    <div class="table-middle-footer">
+                        <div class="columns">
+                            <asp:Literal runat="server" ID="ltrFooter"></asp:Literal>
+                        </div>
+                    </div>
+                </div>
+            </div>--%>
+            <div class="middle-footer">
+                <div class="container">
+                    <div class="columns">
+                        <div class="col-25">
+                            <div class="logo">
+                                <div class="logo">
+                                    <img src="/App_Themes/GiangHuy/images/logo.png">
+                                </div>
+                            </div>
+
+                            <div class="col-inner">
+                                <h3 class="col-main-title">Website gianghuy.com được vận hành bởi:</h3>
+                                <ul class="ul-list">
+                                    <li class="li-item">CÔNG TY CỔ TNHH MTV XUẤT NHẬP KHẨU GIANG HUY</li>
+                                    <li class="li-item">
+                                        <p>
+                                            Giấy chứng nhận đăng ký doanh nghiệp số 4900809866 do Sở Kế hoạch và Đầu tư
+                    tỉnh Lạng Sơn cấp lần đầu ngày 06/06/2017
+                                        </p>
+                                        <div>
+                                            Địa chỉ trụ sở: Số 31 đường Na Làng, tổ 2, khối 2 thị trấn Cao Lộc, huyện Cao Lộc, tỉnh Lạng Sơn
+                                        </div>
+                                    </li>
+                                    <li class="li-item">
+                                        <div class="item info-detail last">
+                                            <div>Tổng đài cskh: <a href="tel:19003304">1900 3304</a></div>
+                                            <div>Hotline: <a href="tel:0989543464">0989.54.34.64 - 0965.54.54.64</a> </div>
+                                            <div>Email: <a href="mailto:cskh@gianghuy.com">cskh@gianghuy.com</a></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-heading">về giang huy</div>
+                            <div class="col-inner">
+                                <ul class="ul-list">
+                                    <asp:Literal runat="server" ID="ltrFooterMenu"></asp:Literal>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-heading">hỗ trợ khách hàng</div>
+                            <div class="col-inner">
+                                <ul class="ul-list">
+                                    <asp:Literal runat="server" ID="ltrFooterSupport"></asp:Literal>
+                                    <li class="li-item">
+                                        <ul class="socical-list">
+                                            <li class="socical-item">
+                                                <asp:Literal runat="server" ID="ltrLinkFB"></asp:Literal>
+                                            </li>
+                                            <li class="socical-item">
+                                                <asp:Literal runat="server" ID="ltrLinkZalo"></asp:Literal>
+                                            </li>
+                                            <li class="socical-item">
+                                                <asp:Literal runat="server" ID="ltrYoutube"></asp:Literal>
+                                            </li>
+                                            <li class="socical-item">
+                                                <asp:Literal runat="server" ID="ltrWebChat"></asp:Literal>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="col-heading">liên hệ</div>
+                            <div class="col-inner">
+                                <h5>TẢI ỨNG DỤNG GIANG HUY CHO MOBILE</h5>
+
+                                <ul class="ul-list">
+                                    <li class="li-item">
+                                        <a class="btn2 btn-google m-r-5" style="display:inline" href="https://play.google.com/store/apps/details?id=com.nhaphanggianghuy" target="_blank" rel="noopener" data-mce-href="https://play.google.com/store/apps/details?id=com.nhaphanggianghuy">
+                                            <img src="/App_Themes/GiangHuy/images/chplay.png" width="150" height="50">
+                                        </a>
+
+                                        <a class="btn2 btn-google" style="display:inline" href="../chuyen-muc/huong-dan/huong-dan-cai-dat-ung-dung-dat-hang-giang-huy-tren-ios" target="_blank" rel="noopener" data-mce-href="../chuyen-muc/huong-dan/huong-dan-cai-dat-ung-dung-dat-hang-giang-huy-tren-ios">
+                                            <img src="/App_Themes/GiangHuy/images/apple.png" width="150" height="50">
+                                        </a>
+                                    </li>
+                                    <li class="li-item">Tìm kiếm sản phẩm, hàng hóa, đặt hàng trực tiếp trên App, quản lý đơn hàng và nhiều hơn nữa
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="middle-footer-below">
+                          <p>
+                            Giấy chứng nhận đăng ký doanh nghiệp số 4900809866 do Sở Kế hoạch và Đầu tư
+                            tỉnh Lạng Sơn cấp lần đầu ngày 06/06/2017
+                          </p>
+                          <div>Địa chỉ trụ sở: Số 31 đường Na Làng, tổ 2, khối 2 thị trấn Cao Lộc, huyện Cao Lộc, tỉnh Lạng Sơn</div>
+                        </div> -->
+                </div>
+            </div>
+            <%--<div class="bottom-footeer">
+                <div class="container">
+                    <div class="copy-right">
+                        <p>
+                            <a href="https://gianghuy.com/" target="_blank" title="Copyright © 2017 - 2021 by GiangHuy. All rights reserved">Copyright © 2017 - 2021 by GiangHuy. All rights reserved</a>&nbsp;
+                        </p>
+                    </div>
+                </div>
+            </div>--%>
+
+            <div class="bottom-footeer">
+                <div class="container">
+                    <div class="copy-right">
+                        <p>
+                            <a href="https://gianghuy.com/" target="_blank"
+                                title="Copyright © 2017 - <%= DateTime.Now.Year.ToString() %> by GiangHuy. All rights reserved">Copyright © 2017 - <%= DateTime.Now.Year.ToString() %> by
+              GiangHuy. All rights reserved</a>&nbsp;
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="m-backtotop" aria-hidden="true">
+            <div class="arrow">
+                <i class="fa fa-caret-up" aria-hidden="true"></i>
+            </div>
+            <div class="text">
+                Back to top
+            </div>
+        </div>
+
+        <script src="/App_Themes/GiangHuy/js/WOW-master/wow.min.js"></script>
+        <script src="/App_Themes/GiangHuy/js/Slick-Js/slick.min.js"></script>
+        <script src="/App_Themes/GiangHuy/js/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
+        <script src="/App_Themes/GiangHuy/js/ms-Dropdown-master/js/msdropdown/jquery.dd.min.js"></script>
+        <script src="/App_Themes/GiangHuy/js/main.js"></script>
+        <%--     <script>
+            new WOW().init();
+            
+        </script>--%>
+        <script>
+            new WOW().init();
+            $("#brand-source").msDropdown();
+            function isEmpty(str) {
+                return !str.replace(/^\s+/g, '').length; // boolean (`true` if field is empty)
+            }
+            function closewebinfo() {
+                $.ajax({
+                    type: "POST",
+                    url: "/Default.aspx/closewebinfo",
+                    //data: "{ID:'" + id + "',UserName:'" + username + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (msg) {
+                        if (msg.d == "ok") {
+                            $(".webinfo").remove();
+                        }
+                    },
+                    error: function (xmlhttprequest, textstatus, errorthrow) {
+                        alert('lỗi');
+                    }
+                });
+            }
+        </script>
+
+
+        <!-- Load Facebook SDK for JavaScript -->
+        <div id="fb-root"></div>
+        <script>
+            window.fbAsyncInit = function () {
+                FB.init({
+                    xfbml: true,
+                    version: 'v8.0'
+                });
+            };
+
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+
+        <!-- Your Chat Plugin code -->
+        <div class="fb-customerchat"
+            attribution="setup_tool"
+            page_id="196021427414405"
+            logged_in_greeting="GIANGHUY.COM chào bạn,"
+            logged_out_greeting="GIANGHUY.COM chào bạn,">
+        </div>
+        <!--Start of Tawk.to Script-->
+        <script type="text/javascript">
+            var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+            (function () {
+                var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+                s1.async = true;
+                s1.src = 'https://embed.tawk.to/5920bc028028bb7327046f5f/default';
+                s1.charset = 'UTF-8';
+                s1.setAttribute('crossorigin', '*');
+                s0.parentNode.insertBefore(s1, s0);
+            })();
+        </script>
+        <!--End of Tawk.to Script-->
+        <script>(function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=1916689885307106&autoLogAppEvents=1';
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+
+        <style>
+            .btn-fixed-social .icon-dt {
+                width: 70px;
+                height: 70px;
+                display: block;
+                position: absolute;
+                bottom: 62px;
+                right: -6px;
+            }
+
+            .btn-fixed-social .icon-zalo {
+                width: 60px;
+                height: 60px;
+                display: block;
+            }
+
+            .btn-fixed-social {
+                position: fixed;
+                bottom: 86px;
+                right: 20px;
+            }
+
+            .scroll-top-link {
+                position: fixed;
+                right: 19px;
+                bottom: 222px;
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                line-height: 38px;
+                font-size: 24px;
+                font-weight: bold;
+                padding: 6px;
+                text-align: center;
+                background-color: #cfd4dd;
+                border: rgba(41, 170, 225, 0.5) 5px solid;
+            }
+        </style>
+
+        <script src="/App_Themes/GiangHuy/js/swiper/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper(".article-swiper", {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                centeredSlides: true,
+                 autoplay: {
+                   delay: 3000,
+                   disableOnInteraction: false,
+                 },
+                breakpoints: {
+                    820: {
+                        slidesPerView: 2,
+                        spaceBetween: 50,
+                    },
+                    920: {
+                        slidesPerView: 3,
+                        spaceBetween: 50,
+                    },
+                },
+            });
+        </script>
+    </form>
+</body>
+</html>
+
