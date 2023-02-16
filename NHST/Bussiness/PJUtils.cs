@@ -168,7 +168,7 @@ namespace NHST.Bussiness
                 if (!string.IsNullOrEmpty(strTo))
                 {
                     string fromAddress = strFrom;
-                    string mailPassword = pass;       // Mail id password from where mail will be sent.
+                    string mailPassword = "cuxpbgknvczyzawm";       // Mail id password from where mail will be sent.
                     string messageBody = strMsg;
 
                     // Create smtp connection.

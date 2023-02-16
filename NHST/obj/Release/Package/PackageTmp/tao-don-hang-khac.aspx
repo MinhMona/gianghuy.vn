@@ -33,7 +33,7 @@
                                                             <label for="search_name"><span>Kho TQ</span></label>
                                                         </div>
                                                     </div>
-                                                    <div class="float-left mt-1" >
+                                                    <div class="float-left mt-1">
                                                         <div class="search-name input-field col s12 l12">
                                                             <asp:DropDownList runat="server" ID="ddlKhoVN" AppendDataBoundItems="true" DataTextField="WareHouseName" DataValueField="ID"></asp:DropDownList>
                                                             <label for="search_name"><span>Kho đích</span></label>
@@ -82,7 +82,7 @@
                                                                         <input class="product-name" type="text" value=""></td>
                                                                     <td>
                                                                         <input class="product-price" type="text" value=""></td>
-                                                                     <td>
+                                                                    <td>
                                                                         <input class="product-colorsize" type="text" value=""></td>
                                                                     <td>
                                                                         <input class="product-quantity" type="number" value="1"></td>
@@ -184,7 +184,7 @@
             }
         }
         function CreateOrder() {
-           <%-- var khotq = $("#<%=ddlKhoTQ.ClientID%>").val();
+            var khotq = $("#<%=ddlKhoTQ.ClientID%>").val();
             var khovn = $("#<%=ddlKhoVN.ClientID%>").val();
             var shipping = $("#<%=ddlShipping.ClientID%>").val();
             if (khotq == 0) {
@@ -198,7 +198,7 @@
             if (shipping == 0) {
                 alert('Vui lòng chọn phương thức VC');
                 return;
-            }--%>
+            }
 
             if ($(".product-item").length > 0) {
                 var html = "";

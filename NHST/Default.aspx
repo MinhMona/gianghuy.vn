@@ -626,7 +626,7 @@
             height: auto;
             position: fixed;
             background-color: #fff;
-            top: 15%;
+            top: 0%;
             z-index: 999999999;
             left: 25%;
             border-radius: 10px;
@@ -789,6 +789,26 @@
       color: #000;
     font-weight: normal;
     text-transform: none;
+}
+
+.find-prd-wrap .title .hd {
+    position: relative;
+    text-transform: uppercase;
+    width: 230px;
+    max-width: 100%;
+    text-align: center;
+    padding: 11px 0;
+    font-weight: 500;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 20px;
+    background: #fff;
+    color: #8A2BE2;
+}
+.left {
+    float: left;
 }
     </style>
 </asp:Content>

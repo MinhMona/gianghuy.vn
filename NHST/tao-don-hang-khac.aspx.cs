@@ -28,25 +28,35 @@ namespace NHST
 
         public void loadPrefix()
         {
+            ddlKhoTQ.Items.Clear();
             var warehousefrom = WarehouseFromController.GetAllWithIsHidden(false);
             if (warehousefrom.Count > 0)
             {
                 ddlKhoTQ.DataSource = warehousefrom;
                 ddlKhoTQ.DataBind();
             }
+            ListItem warehouseFroms = new ListItem("Chọn kho TQ", "0");
+            ddlKhoTQ.Items.Insert(0, warehouseFroms);
+
+            ddlKhoVN.Items.Clear();
             var warehouse = WarehouseController.GetAllWithIsHidden(false);
             if (warehouse.Count > 0)
             {
                 ddlKhoVN.DataSource = warehouse;
                 ddlKhoVN.DataBind();
             }
+            ListItem warehouses = new ListItem("Chọn kho VN", "0");
+            ddlKhoVN.Items.Insert(0, warehouses);
 
+            ddlShipping.Items.Clear();
             var shippingtype = ShippingTypeToWareHouseController.GetAllWithIsHidden(false);
             if (shippingtype.Count > 0)
             {
                 ddlShipping.DataSource = shippingtype;
                 ddlShipping.DataBind();
             }
+            ListItem shippingtypes = new ListItem("Chọn phương thức VC", "0");
+            ddlShipping.Items.Insert(0, shippingtypes);
         }
 
         public void loaddata()
